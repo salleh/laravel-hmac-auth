@@ -1,0 +1,4 @@
+providers:
+  - Salleh\HmacAuth\HmacAuthServiceProvider
+
+migrations: true

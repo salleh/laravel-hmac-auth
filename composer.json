@@ -1,0 +1,70 @@
+{
+    "name": "salleh/laravel-hmac-auth",
+    "description": "HMAC based authentication for Laravel",
+    "license": "MIT",
+    "keywords": [
+        "salleh",
+        "laravel",
+        "security",
+        "guard",
+        "hmac",
+        "authentication"
+    ],
+    "support": {
+        "issues": "https://github.com/salleh/laravel-hmac-auth/issues",
+        "source": "https://github.com/salleh/laravel-hmac-auth"
+    },
+    "authors": [
+        {
+            "name": "Sallehuddin Abdul Latif",
+            "email": "sallehuddin@gmail.com",
+            "homepage": "https://github.com/salleh",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/salleh/laravel-hmac-auth",
+    "require": {
+        "php": "^8.0",
+        "illuminate/auth": "^8.12|^9.0|^10.0",
+        "illuminate/container": "^8.12|^9.0|^10.0",
+        "illuminate/contracts": "^8.12|^9.0|^10.0",
+        "illuminate/database": "^8.12|^9.0|^10.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "*",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^10.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Salleh\\HmacAuth\\": "src/",
+            "Salleh\\HmacAuth\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Laravel\\HmacAuth\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Salleh\\HmacAuth\\HmacAuthServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "post-autoload-dump": "@prepare",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
